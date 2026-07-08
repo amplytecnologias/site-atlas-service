@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Gauge, MapPin, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 
@@ -24,13 +24,13 @@ export function Footer() {
       <div className="container mx-auto px-4 pb-8 pt-16 md:px-6">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-brand-dark text-white">
-                <Gauge className="h-5 w-5" />
-              </span>
-              <span className="font-display text-lg font-extrabold tracking-tight text-white">
-                ATLAS <span className="text-teal-light">SERVICE</span>
-              </span>
+            <Link href="/" className="inline-block">
+              <img
+                src="/logo-branca.png"
+                alt="Atlas Service — manutenção em compressores"
+                className="h-24 w-auto"
+                loading="lazy"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Aluguel, venda, componentes e manutenção de compressores de ar de parafuso para mineração e
