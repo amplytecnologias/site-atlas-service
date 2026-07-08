@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/site/header";
@@ -7,6 +7,14 @@ import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" });
+
+// Trava o zoom por gesto no celular (pedido do cliente) e fixa a escala.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.atlasservice.com.br"),

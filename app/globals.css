@@ -44,6 +44,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Nenhum elemento pode criar rolagem lateral no celular */
+html,
+body {
+  overflow-x: clip;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

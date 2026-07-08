@@ -44,7 +44,7 @@ function Hero() {
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center gap-8 pb-12 pt-28 lg:pb-16 lg:pt-36">
           <div className="flex flex-col gap-4">
-            <h1 className="mx-auto max-w-3xl text-center font-display text-5xl font-medium tracking-tighter text-white md:text-7xl">
+            <h1 className="mx-auto max-w-3xl text-center font-display text-4xl font-medium tracking-tighter text-white sm:text-5xl md:text-7xl">
               <span className="relative flex h-[1.4em] w-full justify-center overflow-hidden text-center">
                 &nbsp;
                 {titles.map((title, index) => (
@@ -60,7 +60,7 @@ function Hero() {
                 ))}
               </span>
               <span className="block">de compressores de parafuso</span>
-              <span className="mt-3 block text-2xl font-medium tracking-tight text-brand-mist md:text-4xl">
+              <span className="mt-3 block text-xl font-medium tracking-tight text-brand-mist sm:text-2xl md:text-4xl">
                 em Betim e para toda Minas Gerais
               </span>
             </h1>
@@ -70,18 +70,18 @@ function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+          <div className="flex w-full max-w-sm flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row">
+            <Button size="lg" className="w-full gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto" asChild>
               <a href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5" />
-                Faça seu orçamento no WhatsApp
+                Orçamento no WhatsApp
                 <MoveRight className="h-4 w-4" />
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="gap-3 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white"
+              className="w-full gap-3 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white sm:w-auto"
               asChild
             >
               <a href={PHONE_TEL}>
