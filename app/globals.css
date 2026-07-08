@@ -50,6 +50,11 @@ body {
   overflow-x: clip;
 }
 
+/* Fundo do html na cor do site: sem faixas brancas nas laterais/overscroll no celular */
+html {
+  background-color: #eef3ff;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
