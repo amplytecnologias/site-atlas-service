@@ -25,12 +25,9 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="inline-block">
-              <img
-                src="/logo-branca.png"
-                alt="Atlas Service — manutenção em compressores"
-                className="h-24 w-auto"
-                loading="lazy"
-              />
+              <span className="font-display text-2xl font-extrabold uppercase tracking-wide text-white">
+                Atlas <span className="text-teal-light">Service</span>
+              </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Aluguel, venda, componentes e manutenção de compressores de ar de parafuso para mineração e
