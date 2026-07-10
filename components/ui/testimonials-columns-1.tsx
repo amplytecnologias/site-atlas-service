@@ -11,7 +11,7 @@ const testimonials = [
     role: "Supervisor de Manutenção · Mineração, Brumadinho/MG",
   },
   {
-    text: "O atendimento é direto com quem entende. Precisei de socorro num domingo e o técnico estava na planta em poucas horas.",
+    text: "O atendimento é direto com quem entende. Precisei de atendimento de emergência num domingo e o técnico estava na planta em poucas horas.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     name: "Fernanda Rocha",
     role: "Gerente Industrial · Metalúrgica, Betim/MG",

@@ -24,7 +24,7 @@ const otherServices = [
     icon: Wrench,
     accent: "text-brand-indigo bg-brand-indigo/10",
     title: "Manutenção / Assistência",
-    desc: "Preventiva, corretiva e socorro técnico em campo. Atendemos contratos e chamados avulsos em toda MG.",
+    desc: "Preventiva, corretiva e assistência técnica em campo. Atendemos contratos e chamados avulsos em toda MG.",
   },
 ];
 
@@ -69,9 +69,9 @@ export function Servicos() {
                     </h3>
                   </div>
                   <p className="mt-4 max-w-xl leading-relaxed text-brand-mist">
-                    Todas as nossas máquinas estão disponíveis para locação e também para venda. Alugue sem
+                    Todas as nossas máquinas estão disponíveis para locação e também para venda. Aluguel sem
                     imobilizar capital — nós instalamos, mantemos e damos assistência durante todo o contrato
-                    — ou compre um equipamento revisado com garantia.
+                    — ou compra de equipamento revisado com garantia.
                   </p>
                   <ul className="mt-6 space-y-2.5">
                     {locacaoVendaBullets.map((item) => (

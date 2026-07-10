@@ -10,7 +10,7 @@ const serviceChips = [
   { icon: CalendarClock, label: "Aluguel com assistência inclusa" },
   { icon: Tag, label: "Venda de máquinas" },
   { icon: Droplets, label: "Componentes e óleo" },
-  { icon: Wrench, label: "Manutenção e socorro técnico" },
+  { icon: Wrench, label: "Manutenção e assistência técnica" },
 ];
 
 function Hero() {
@@ -61,12 +61,12 @@ function Hero() {
               </span>
               <span className="block">de compressores de parafuso</span>
               <span className="mt-3 block text-xl font-medium tracking-tight text-brand-mist sm:text-2xl md:text-4xl">
-                em Betim e para toda Minas Gerais
+                para indústrias de todo o Brasil
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed tracking-tight text-brand-mist md:text-xl">
-              Alugue com assistência técnica inclusa e opção de compra ao final do contrato.
-              Atendemos mineração e indústria em todo o estado — nossa equipe vai até a sua operação.
+              Aluguel com assistência técnica inclusa e opção de compra ao final do contrato.
+              Atendemos mineração e indústria em todo o Brasil — nossa equipe vai até a sua operação.
             </p>
           </div>
 

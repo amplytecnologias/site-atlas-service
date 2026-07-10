@@ -5,7 +5,7 @@ import { ServicePage, type ServicePageData } from "@/components/site/service-pag
 export const metadata: Metadata = {
   title: "Manutenção e Assistência Técnica de Compressor de Parafuso | MG",
   description:
-    "Manutenção preventiva, corretiva e socorro técnico para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria em Betim, BH e toda MG.",
+    "Manutenção preventiva, corretiva e assistência técnica emergencial para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria em Betim, BH e toda MG.",
 };
 
 const data: ServicePageData = {
@@ -13,7 +13,7 @@ const data: ServicePageData = {
   title: "Manutenção e assistência técnica",
   highlight: "em toda Minas Gerais",
   intro:
-    "Equipe própria especializada em compressores de parafuso para manutenção preventiva, corretiva e socorro em campo. Atendemos por contrato ou chamado avulso — na sua planta, em qualquer região de MG.",
+    "Equipe própria especializada em compressores de parafuso para manutenção preventiva, corretiva e atendimento emergencial em campo. Atendemos por contrato ou chamado avulso — na sua planta, em qualquer região de MG.",
   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=75",
   imageAlt: "Profissional de manutenção industrial trabalhando em equipamento",
   bullets: [
@@ -24,12 +24,12 @@ const data: ServicePageData = {
     },
     {
       icon: Wrench,
-      title: "Corretiva e socorro",
+      title: "Corretiva e emergencial",
       text: "Diagnóstico rápido e reparo em campo ou em nossa oficina. Prioridade total para máquina parada.",
     },
     {
       icon: MapPin,
-      title: "Atendimento em todo o estado",
+      title: "Atendimento em todo o Estado",
       text: "Base em Betim e equipe que viaja: mineração no interior, indústria na Grande BH — chegamos onde sua operação está.",
     },
   ],
@@ -40,7 +40,7 @@ const data: ServicePageData = {
     "Revisão geral (overhaul) de unidade compressora",
     "Análise de vazamentos e eficiência da rede de ar",
     "Contratos de manutenção com condições especiais",
-    "Socorro técnico prioritário para clientes de contrato",
+    "Atendimento emergencial prioritário para clientes de contrato",
   ],
   ctaTitle: "Compressor parado ou revisão vencendo?",
   ctaText: "Chame agora no WhatsApp: diagnóstico rápido e técnico a caminho da sua planta.",

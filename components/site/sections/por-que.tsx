@@ -21,13 +21,13 @@ const differentials = [
     icon: MapPin,
     accent: "border-brand text-brand bg-brand/10",
     title: "Atendimento em toda MG",
-    text: "Base em Betim, na porta da região industrial, e equipe que viaja para qualquer canto do estado.",
+    text: "Base em Betim, na porta da região industrial, e equipe que viaja para qualquer canto do Estado.",
   },
   {
     icon: Zap,
     accent: "border-brand-teal text-brand-teal bg-brand-teal/10",
     title: "Resposta rápida",
-    text: "Compressor parado é produção parada. Priorizamos o socorro técnico e a reposição de máquina em campo.",
+    text: "Compressor parado é produção parada. Priorizamos o atendimento emergencial e a reposição de máquina em campo.",
   },
   {
     icon: HardHat,

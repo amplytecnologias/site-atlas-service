@@ -31,7 +31,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Aluguel, venda, componentes e manutenção de compressores de ar de parafuso para mineração e
-              indústria. Base em Betim/MG — atendemos todo o estado.
+              indústria. Base em Betim/MG — atendemos todo o Estado.
             </p>
           </div>
 
