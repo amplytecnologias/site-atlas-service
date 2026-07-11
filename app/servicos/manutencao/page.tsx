@@ -13,9 +13,9 @@ const data: ServicePageData = {
   title: "Manutenção e assistência técnica",
   highlight: "em toda Minas Gerais",
   intro:
-    "Equipe própria especializada em compressores de parafuso para manutenção preventiva, corretiva e atendimento emergencial em campo. Atendemos por contrato ou chamado avulso — na sua planta, em qualquer região de MG.",
-  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=75",
-  imageAlt: "Profissional de manutenção industrial trabalhando em equipamento",
+    "Equipe própria especializada em compressores de parafuso para manutenção preventiva, corretiva e atendimento emergencial em campo. Atendemos por contrato ou chamado avulso — na sua empresa, em qualquer região de MG.",
+  image: "/images/par-de-rotores.jpg",
+  imageAlt: "Par de rotores de compressor de parafuso revisado pela Atlas Service",
   bullets: [
     {
       icon: CalendarCheck,
@@ -24,7 +24,7 @@ const data: ServicePageData = {
     },
     {
       icon: Wrench,
-      title: "Corretiva e emergencial",
+      title: "Corretiva e assistência técnica",
       text: "Diagnóstico rápido e reparo em campo ou em nossa oficina. Prioridade total para máquina parada.",
     },
     {
@@ -40,10 +40,10 @@ const data: ServicePageData = {
     "Revisão geral (overhaul) de unidade compressora",
     "Análise de vazamentos e eficiência da rede de ar",
     "Contratos de manutenção com condições especiais",
-    "Atendimento emergencial prioritário para clientes de contrato",
+    "Assistência técnica prioritária para clientes de contrato",
   ],
   ctaTitle: "Compressor parado ou revisão vencendo?",
-  ctaText: "Chame agora no WhatsApp: diagnóstico rápido e técnico a caminho da sua planta.",
+  ctaText: "Chame agora no WhatsApp: diagnóstico rápido e técnico a caminho da sua empresa.",
   ctaMessage: "Olá! Preciso de MANUTENÇÃO/ASSISTÊNCIA para compressor de parafuso.",
 };
 

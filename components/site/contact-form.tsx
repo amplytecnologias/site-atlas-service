@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
-import { whatsappLink } from "@/lib/site";
+import { EMAIL } from "@/lib/site";
 
 const serviceOptions = [
   "Aluguel de compressor",
@@ -22,15 +22,17 @@ export function ContactForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const subject = `Orçamento pelo site — ${data.get("servico")}`;
     const lines = [
       "Olá! Vim pelo site da Atlas Service.",
-      `*Nome:* ${data.get("nome")}`,
-      data.get("empresa") ? `*Empresa:* ${data.get("empresa")}` : null,
-      `*Telefone:* ${data.get("telefone")}`,
-      `*Serviço:* ${data.get("servico")}`,
-      data.get("mensagem") ? `*Mensagem:* ${data.get("mensagem")}` : null,
+      "",
+      `Nome: ${data.get("nome")}`,
+      data.get("empresa") ? `Empresa: ${data.get("empresa")}` : null,
+      `Telefone: ${data.get("telefone")}`,
+      `Serviço de interesse: ${data.get("servico")}`,
+      data.get("mensagem") ? `Mensagem: ${data.get("mensagem")}` : null,
     ].filter(Boolean);
-    window.open(whatsappLink(lines.join("\n")), "_blank", "noopener,noreferrer");
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
     setSent(true);
   }
 
@@ -84,17 +86,18 @@ export function ContactForm() {
       </div>
 
       <p className="text-sm text-muted-foreground sm:col-span-2">
-        Ao enviar, você será direcionado ao WhatsApp com a mensagem pronta — é só confirmar o envio.
+        Ao enviar, seu aplicativo de e-mail abre com a mensagem pronta para {EMAIL} — é só confirmar o
+        envio.
       </p>
 
-      <Button type="submit" size="lg" className="gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark sm:col-span-2">
-        <WhatsAppIcon className="h-5 w-5" />
-        Enviar pelo WhatsApp
+      <Button type="submit" size="lg" className="gap-2 bg-brand text-white hover:bg-brand-dark sm:col-span-2">
+        <Mail className="h-5 w-5" />
+        Enviar por e-mail
       </Button>
 
       {sent && (
         <p role="status" className="text-sm font-medium text-brand-teal sm:col-span-2">
-          Mensagem preparada no WhatsApp! Se a janela não abriu, verifique o bloqueador de pop-ups do navegador.
+          Mensagem preparada no seu aplicativo de e-mail! Se nada abriu, escreva direto para {EMAIL}.
         </p>
       )}
     </form>

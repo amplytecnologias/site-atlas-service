@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Diagnóstico da demanda",
-    text: "Você nos conta a necessidade — vazão, pressão e regime de trabalho — pelo WhatsApp ou em visita técnica à planta.",
+    text: "Você nos conta a necessidade — vazão, pressão e regime de trabalho — pelo WhatsApp ou em visita técnica à sua empresa.",
   },
   {
     number: "02",

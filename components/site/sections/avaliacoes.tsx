@@ -24,7 +24,7 @@ export function Avaliacoes() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Depoimentos de gestores de manutenção, produção e suprimentos que confiam o ar comprimido das
-            suas plantas à nossa equipe.
+            suas empresas à nossa equipe.
           </p>
         </Reveal>
 

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { CalendarClock, Droplets, MoveRight, PhoneCall, Tag, Wrench } from "lucide-react";
+import { BadgeCheck, CalendarClock, Droplets, MoveRight, PhoneCall, Tag, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { DEFAULT_WHATSAPP_MESSAGE, PHONE_TEL, whatsappLink } from "@/lib/site";
@@ -40,15 +40,19 @@ function Hero() {
           loop
           playsInline
           preload="metadata"
-          className="h-full w-full object-cover object-center opacity-55"
+          className="h-full w-full object-cover object-center opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/90 via-brand-dark/80 to-brand/65" />
-        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-brand-ink/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/60 via-brand-dark/45 to-brand/40" />
+        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-brand-ink/70 to-transparent" />
       </div>
 
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center gap-8 pb-12 pt-28 lg:pb-16 lg:pt-36">
           <div className="flex flex-col gap-4">
+            <span className="mx-auto inline-flex items-center gap-2 rounded-full border-2 border-teal-light/60 bg-brand-ink/55 px-5 py-2 text-sm font-extrabold uppercase tracking-[0.18em] text-teal-light shadow-lg shadow-brand-ink/30 backdrop-blur-sm md:text-base">
+              <BadgeCheck className="h-5 w-5" aria-hidden />
+              16 anos de atividade
+            </span>
             <h1 className="mx-auto max-w-3xl text-center font-display text-4xl font-medium tracking-tighter text-white sm:text-5xl md:text-7xl">
               <span className="relative flex h-[1.4em] w-full justify-center overflow-hidden text-center">
                 &nbsp;

@@ -179,7 +179,7 @@ export const products: Product[] = [
       "Produção contínua em três turnos",
       "Siderurgia e fundições",
       "Processos que exigem ar seco na rede",
-      "Grandes plantas industriais",
+      "Grandes indústrias",
     ],
   },
   {
@@ -211,7 +211,7 @@ export const products: Product[] = [
       "Produção contínua em três turnos",
       "Siderurgia e fundições",
       "Mineração e britagem",
-      "Grandes plantas industriais",
+      "Grandes indústrias",
     ],
   },
   {
@@ -335,7 +335,7 @@ export const products: Product[] = [
       "Mineração e frentes de lavra",
       "Britagem e beneficiamento de minério",
       "Siderurgia e indústria pesada",
-      "Grandes plantas com produção contínua",
+      "Grandes indústrias com produção contínua",
     ],
   },
 ];

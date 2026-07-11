@@ -52,7 +52,7 @@ export function Header() {
           <img
             src="/logo.png"
             alt="Atlas Service — manutenção em compressores"
-            className="h-16 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.55)] md:h-20"
+            className="h-16 w-auto [filter:drop-shadow(0_0_6px_rgba(255,255,255,0.95))_drop-shadow(0_0_20px_rgba(255,255,255,0.75))] md:h-20"
           />
         </Link>
       </div>
