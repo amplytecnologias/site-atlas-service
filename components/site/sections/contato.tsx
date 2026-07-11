@@ -1,10 +1,10 @@
 import type { ComponentType } from "react";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
 import { ContactForm } from "@/components/site/contact-form";
 import { ContactMapLazy } from "@/components/site/contact-map-lazy";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
-import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
+import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 
 type ContactItem = {
   icon: ComponentType<{ className?: string }>;
@@ -24,9 +24,15 @@ const contactItems: ContactItem[] = [
   {
     icon: WhatsAppIcon,
     label: "WhatsApp",
-    value: "Orçamento direto com o dono",
+    value: "Orçamento rápido por mensagem",
     href: whatsappLink(DEFAULT_WHATSAPP_MESSAGE),
     external: true,
+  },
+  {
+    icon: Mail,
+    label: "E-mail",
+    value: EMAIL,
+    href: EMAIL_MAILTO,
   },
   {
     icon: MapPin,
@@ -36,7 +42,7 @@ const contactItems: ContactItem[] = [
   {
     icon: Clock,
     label: "Horário",
-    value: "Seg. a sex., 7h30 às 17h30 — plantão para contratos",
+    value: "Seg. a sex., 8h às 17h — plantão para contratos",
   },
 ];
 
@@ -55,7 +61,7 @@ export function Contato() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Conte sua necessidade de ar comprimido e receba um orçamento rápido. Se preferir, venha nos
-              visitar em Betim.
+              visitar na região metropolitana de BH.
             </p>
 
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -110,7 +116,7 @@ export function Contato() {
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
               <strong className="font-semibold text-brand-ink">Atlas Service</strong> · {ADDRESS} — a poucos
-              minutos do polo industrial de Betim e do Anel Rodoviário de BH.
+              minutos do polo industrial e do Anel Rodoviário de BH.
             </p>
           </Reveal>
         </div>

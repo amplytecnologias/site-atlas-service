@@ -4,9 +4,9 @@ import { ServicePage, type ServicePageData } from "@/components/site/service-pag
 import { Produtos } from "@/components/site/sections/produtos";
 
 export const metadata: Metadata = {
-  title: "Locação e Venda de Compressor de Parafuso em Betim, BH e MG",
+  title: "Locação e Venda de Compressor de Parafuso em BH e MG",
   description:
-    "Compressores de ar de parafuso Atlas Service revisados, disponíveis para locação com assistência técnica inclusa e para venda com garantia. Atendemos Betim, BH e toda Minas Gerais.",
+    "Compressores de ar de parafuso Atlas Service revisados, disponíveis para locação com assistência técnica inclusa e para venda com garantia. Atendemos a região metropolitana de BH e toda Minas Gerais.",
 };
 
 const data: ServicePageData = {
@@ -15,8 +15,8 @@ const data: ServicePageData = {
   highlight: "revisados e com garantia",
   intro:
     "Todas as nossas máquinas estão disponíveis tanto para locação quanto para venda. Você escolhe: aluguel sem imobilizar capital, com manutenção e assistência por nossa conta, ou compra de um equipamento revisado com garantia — nos dois casos, entregamos, instalamos e fazemos a entrega técnica na sua operação.",
-  image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=75",
-  imageAlt: "Técnico industrial acompanhando compressor de parafuso em operação",
+  image: "/images/pecas-compressores.jpg",
+  imageAlt: "Peças e kits de filtros para compressores de parafuso",
   bullets: [
     {
       icon: Wrench,
@@ -43,9 +43,9 @@ const data: ServicePageData = {
     "Assistência técnica e manutenção inclusas durante a locação",
     "Opção de compra do equipamento ao final do contrato",
   ],
-  ctaTitle: "Precisa de ar comprimido na sua planta?",
+  ctaTitle: "Precisa de ar comprimido na sua empresa?",
   ctaText:
-    "Mande sua necessidade agora e receba uma proposta de locação ou venda sob medida para mineração, obra ou indústria.",
+    "Mande sua necessidade agora e receba uma proposta de locação ou venda sob medida para mineração ou indústria.",
   ctaMessage: "Olá! Quero um orçamento de compressor de parafuso (locação ou venda).",
 };
 

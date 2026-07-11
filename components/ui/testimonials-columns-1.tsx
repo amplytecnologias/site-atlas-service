@@ -14,7 +14,7 @@ const testimonials = [
     text: "O atendimento é direto com quem entende. Precisei de atendimento de emergência num domingo e o técnico estava na planta em poucas horas.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     name: "Fernanda Rocha",
-    role: "Gerente Industrial · Metalúrgica, Betim/MG",
+    role: "Gerente Industrial · Metalúrgica, Grande BH",
   },
   {
     text: "Começamos alugando e depois compramos a máquina abatendo parte da locação. Modelo de negócio que faz sentido para a indústria.",
@@ -56,7 +56,7 @@ const testimonials = [
     text: "Do orçamento no WhatsApp à entrega técnica da máquina foram poucos dias. Agilidade rara nesse mercado.",
     image: "https://randomuser.me/api/portraits/women/50.jpg",
     name: "Luciana Prates",
-    role: "Sócia-administradora · Usinagem, Betim/MG",
+    role: "Sócia-administradora · Usinagem, Grande BH",
   },
 ];
 

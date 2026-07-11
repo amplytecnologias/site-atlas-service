@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} — Venda e Locação em Betim e MG`,
-    description: `${product.shortDesc} Especificações completas, venda com garantia e locação com assistência inclusa em Betim, BH e toda Minas Gerais.`,
+    title: `${product.name} — Venda e Locação em BH e MG`,
+    description: `${product.shortDesc} Especificações completas, venda com garantia e locação com assistência inclusa na região metropolitana de BH e toda Minas Gerais.`,
   };
 }
 

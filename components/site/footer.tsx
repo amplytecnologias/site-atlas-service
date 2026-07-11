@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
-import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
+import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -31,7 +31,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Aluguel, venda, filtros e manutenção de compressores de ar de parafuso para mineração e
-              indústria. Base em Betim/MG — atendemos todo o Estado.
+              indústria.
             </p>
           </div>
 
@@ -79,6 +79,12 @@ export function Footer() {
                 >
                   <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-teal-light" />
                   Orçamento no WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href={EMAIL_MAILTO} className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light">
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-teal-light" />
+                  {EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-sm">

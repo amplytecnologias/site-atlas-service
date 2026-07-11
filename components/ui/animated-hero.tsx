@@ -32,9 +32,14 @@ function Hero() {
     <div className="relative w-full overflow-hidden bg-brand-ink">
       {/* Camada de fundo: compressores em operação de mineração + gradiente azul da marca por cima */}
       <div aria-hidden className="absolute inset-0">
-        <img
-          src="/images/hero-compressores.jpg"
-          alt=""
+        <video
+          src="/images/video-hero.mp4"
+          poster="/images/hero-compressores.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           className="h-full w-full object-cover object-center opacity-55"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/90 via-brand-dark/80 to-brand/65" />

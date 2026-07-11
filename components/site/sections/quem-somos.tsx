@@ -5,7 +5,7 @@ const checklist = [
   "Locação com assistência técnica inclusa no contrato",
   "Opção de compra da máquina ao final da locação",
   "Equipe especializada em manutenção de compressores de parafuso",
-  "Base em Betim/MG com atendimento em todo o Estado",
+  "Base na região metropolitana de BH com atendimento em todo o Estado",
 ];
 
 export function QuemSomos() {

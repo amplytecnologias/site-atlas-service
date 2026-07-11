@@ -17,7 +17,7 @@ const otherServices = [
     icon: Droplets,
     accent: "text-brand-teal bg-brand-teal/10",
     title: "Filtros e óleo",
-    desc: "Filtros, separadores, válvulas, kits de reparo e óleo específico para parafuso — pronta entrega em Betim.",
+    desc: "Filtros, separadores, válvulas, kits de reparo e óleo específico para compressores de parafuso — pronta entrega na região metropolitana de BH.",
   },
   {
     href: "/servicos/manutencao",

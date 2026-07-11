@@ -13,6 +13,9 @@ export function whatsappLink(message: string) {
 export const PHONE_DISPLAY = "(31) 3531-7749";
 export const PHONE_TEL = "tel:+553135317749";
 
+export const EMAIL = "contato@atlasservicemg.com.br";
+export const EMAIL_MAILTO = `mailto:${EMAIL}`;
+
 export const ADDRESS = "R. Pernambuco, 177 – Vila Universal, Betim/MG";
 export const ADDRESS_COORDS = { lat: -19.9686, lng: -44.1986 };
 

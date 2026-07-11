@@ -15,13 +15,13 @@ const differentials = [
     icon: BadgeCheck,
     accent: "border-brand-indigo text-brand-indigo bg-brand-indigo/10",
     title: "Opção de compra no final",
-    text: "Alugou, testou na sua operação e gostou? A máquina pode ficar sua ao final do contrato, com condições especiais.",
+    text: "Você testa a máquina rodando na sua operação e, se fizer sentido, ela fica sua ao final do contrato — em condições especiais.",
   },
   {
     icon: MapPin,
     accent: "border-brand text-brand bg-brand/10",
     title: "Atendimento em toda MG",
-    text: "Base em Betim, na porta da região industrial, e equipe que viaja para qualquer canto do Estado.",
+    text: "Base na região metropolitana de BH, na porta da região industrial, e equipe que viaja para qualquer canto do Estado.",
   },
   {
     icon: Zap,
@@ -70,7 +70,7 @@ export function PorQue() {
               <div>
                 <h3 className="font-display text-lg font-bold tracking-tight">Fale direto com quem resolve</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-brand-mist">
-                  Sem fila de atendimento. Seu orçamento cai no WhatsApp de quem decide e conhece as máquinas.
+                  Sem fila de atendimento. Seu orçamento cai no WhatsApp de quem conhece as máquinas de verdade.
                 </p>
               </div>
               <Button className="mt-6 gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>

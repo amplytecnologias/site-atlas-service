@@ -5,7 +5,7 @@ import { ServicePage, type ServicePageData } from "@/components/site/service-pag
 export const metadata: Metadata = {
   title: "Manutenção e Assistência Técnica de Compressor de Parafuso | MG",
   description:
-    "Manutenção preventiva, corretiva e assistência técnica emergencial para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria em Betim, BH e toda MG.",
+    "Manutenção preventiva, corretiva e assistência técnica emergencial para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria na região metropolitana de BH e toda MG.",
 };
 
 const data: ServicePageData = {
@@ -30,7 +30,7 @@ const data: ServicePageData = {
     {
       icon: MapPin,
       title: "Atendimento em todo o Estado",
-      text: "Base em Betim e equipe que viaja: mineração no interior, indústria na Grande BH — chegamos onde sua operação está.",
+      text: "Base na região metropolitana de BH e equipe que viaja: mineração no interior, indústria em todo o Estado — chegamos onde sua operação está.",
     },
   ],
   checklistTitle: "O que cobrimos na assistência técnica",
