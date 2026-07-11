@@ -16,8 +16,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "Entrega e partida",
-    text: "Levamos o compressor até a sua operação em qualquer região de MG, instalamos e fazemos a partida assistida.",
+    title: "Entrega técnica",
+    text: "Levamos o compressor até a sua operação em qualquer região do país, instalamos e fazemos a entrega técnica.",
   },
   {
     number: "04",
@@ -37,7 +37,7 @@ export function ComoFunciona() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-teal-light">
             <span className="h-px w-10 bg-teal-light" aria-hidden />
-            Como funciona o aluguel
+            Como funciona a locação
             <span className="h-px w-10 bg-teal-light" aria-hidden />
           </p>
           <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight md:text-4xl">
@@ -68,7 +68,7 @@ export function ComoFunciona() {
         <Reveal className="mt-10 text-center" delay={0.2}>
           <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
             <a
-              href={whatsappLink("Olá! Quero entender como funciona o aluguel de compressor de parafuso da Atlas Service.")}
+              href={whatsappLink("Olá! Quero entender como funciona a locação de compressor de parafuso da Atlas Service.")}
               target="_blank"
               rel="noopener noreferrer"
             >

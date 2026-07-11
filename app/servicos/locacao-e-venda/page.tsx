@@ -14,7 +14,7 @@ const data: ServicePageData = {
   title: "Locação e venda de compressores de parafuso",
   highlight: "revisados e com garantia",
   intro:
-    "Todas as nossas máquinas estão disponíveis tanto para locação quanto para venda. Você escolhe: aluguel sem imobilizar capital, com manutenção e assistência por nossa conta, ou compra de um equipamento revisado com garantia — nos dois casos, entregamos, instalamos e fazemos a partida assistida em toda MG.",
+    "Todas as nossas máquinas estão disponíveis tanto para locação quanto para venda. Você escolhe: aluguel sem imobilizar capital, com manutenção e assistência por nossa conta, ou compra de um equipamento revisado com garantia — nos dois casos, entregamos, instalamos e fazemos a entrega técnica na sua operação.",
   image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=75",
   imageAlt: "Técnico industrial acompanhando compressor de parafuso em operação",
   bullets: [
@@ -39,7 +39,7 @@ const data: ServicePageData = {
     "Dimensionamento gratuito da demanda de ar (vazão e pressão)",
     "Contratos de locação flexíveis: emergencial, mensal ou de longo prazo",
     "Máquinas revisadas com laudo técnico e garantia",
-    "Entrega, instalação e partida assistida em toda MG",
+    "Transporte, instalação e entrega técnica na sua operação",
     "Assistência técnica e manutenção inclusas durante a locação",
     "Opção de compra do equipamento ao final do contrato",
   ],

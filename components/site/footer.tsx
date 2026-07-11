@@ -14,7 +14,7 @@ const navigation = [
 
 const services = [
   { href: "/servicos/locacao-e-venda", label: "Locação e venda de compressores" },
-  { href: "/servicos/componentes-e-oleo", label: "Componentes e óleo" },
+  { href: "/servicos/filtros-e-oleo", label: "Filtros e óleo" },
   { href: "/servicos/manutencao", label: "Manutenção / Assistência" },
 ];
 
@@ -30,7 +30,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
-              Aluguel, venda, componentes e manutenção de compressores de ar de parafuso para mineração e
+              Aluguel, venda, filtros e manutenção de compressores de ar de parafuso para mineração e
               indústria. Base em Betim/MG — atendemos todo o Estado.
             </p>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
           <p>© {new Date().getFullYear()} Atlas Service — Compressores de parafuso. Todos os direitos reservados.</p>
-          <p className="tracking-wide text-white/50">Aluguel · Venda · Componentes · Manutenção</p>
+          <p className="tracking-wide text-white/50">Aluguel · Venda · Filtros e óleo · Manutenção</p>
         </div>
       </div>
     </footer>

@@ -19,7 +19,7 @@ const sections = [
 
 const services = [
   { href: "/servicos/locacao-e-venda", label: "Locação e venda de compressores" },
-  { href: "/servicos/componentes-e-oleo", label: "Componentes e óleo" },
+  { href: "/servicos/filtros-e-oleo", label: "Filtros e óleo" },
   { href: "/servicos/manutencao", label: "Manutenção / Assistência" },
 ];
 

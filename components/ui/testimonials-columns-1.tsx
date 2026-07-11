@@ -23,7 +23,7 @@ const testimonials = [
     role: "Diretor de Operações · Britagem, Sete Lagoas/MG",
   },
   {
-    text: "Óleo e componentes originais sempre à pronta entrega. Reduzimos o downtime dos nossos compressores em mais da metade.",
+    text: "Óleo e filtros originais sempre à pronta entrega. Reduzimos o downtime dos nossos compressores em mais da metade.",
     image: "https://randomuser.me/api/portraits/men/41.jpg",
     name: "Marcos Vinícius Teles",
     role: "Analista de PCM · Autopeças, Contagem/MG",
@@ -53,7 +53,7 @@ const testimonials = [
     role: "Gerente de Manutenção · Siderurgia, Itabira/MG",
   },
   {
-    text: "Do orçamento no WhatsApp à partida da máquina foram poucos dias. Agilidade rara nesse mercado.",
+    text: "Do orçamento no WhatsApp à entrega técnica da máquina foram poucos dias. Agilidade rara nesse mercado.",
     image: "https://randomuser.me/api/portraits/women/50.jpg",
     name: "Luciana Prates",
     role: "Sócia-administradora · Usinagem, Betim/MG",

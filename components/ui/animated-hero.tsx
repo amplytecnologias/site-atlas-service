@@ -9,13 +9,13 @@ import { DEFAULT_WHATSAPP_MESSAGE, PHONE_TEL, whatsappLink } from "@/lib/site";
 const serviceChips = [
   { icon: CalendarClock, label: "Aluguel com assistência inclusa" },
   { icon: Tag, label: "Venda de máquinas" },
-  { icon: Droplets, label: "Componentes e óleo" },
+  { icon: Droplets, label: "Filtros e óleo" },
   { icon: Wrench, label: "Manutenção e assistência técnica" },
 ];
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
-  const titles = useMemo(() => ["Aluguel", "Venda", "Componentes", "Manutenção"], []);
+  const titles = useMemo(() => ["Aluguel", "Venda", "Filtros", "Manutenção"], []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {

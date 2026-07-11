@@ -13,10 +13,10 @@ const locacaoVendaBullets = [
 
 const otherServices = [
   {
-    href: "/servicos/componentes-e-oleo",
+    href: "/servicos/filtros-e-oleo",
     icon: Droplets,
     accent: "text-brand-teal bg-brand-teal/10",
-    title: "Componentes e óleo",
+    title: "Filtros e óleo",
     desc: "Filtros, separadores, válvulas, kits de reparo e óleo específico para parafuso — pronta entrega em Betim.",
   },
   {
@@ -42,8 +42,8 @@ export function Servicos() {
             Tudo o que sua operação precisa em ar comprimido
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Da locação emergencial ao contrato de manutenção de longo prazo — uma única empresa cuidando do
-            seu parque de compressores.
+            Da locação emergencial ao contrato de manutenção de longo prazo — uma única empresa cuidando da
+            sua sala de compressores.
           </p>
         </Reveal>
 

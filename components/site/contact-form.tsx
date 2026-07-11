@@ -8,7 +8,7 @@ import { whatsappLink } from "@/lib/site";
 const serviceOptions = [
   "Aluguel de compressor",
   "Venda de máquina",
-  "Componentes e óleo",
+  "Filtros e óleo",
   "Manutenção / assistência técnica",
   "Outro assunto",
 ];

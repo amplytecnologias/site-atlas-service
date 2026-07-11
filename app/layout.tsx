@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Atlas Service",
   },
   description:
-    "Aluguel de compressor de parafuso em Betim, BH e toda Minas Gerais com assistência técnica inclusa e opção de compra. Venda de máquinas, componentes, óleo e manutenção para mineração e indústria.",
+    "Aluguel de compressor de parafuso em Betim, BH e toda Minas Gerais com assistência técnica inclusa e opção de compra. Venda de máquinas, filtros, óleo e manutenção para mineração e indústria.",
   keywords: [
     "aluguel de compressor de parafuso",
     "locação de compressor Betim",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Atlas Service",
     title: "Atlas Service | Compressores de Parafuso em Betim e MG",
     description:
-      "Aluguel com assistência técnica inclusa, venda, componentes, óleo e manutenção de compressores de parafuso para mineração e indústria em Minas Gerais.",
+      "Aluguel com assistência técnica inclusa, venda, filtros, óleo e manutenção de compressores de parafuso para mineração e indústria em Minas Gerais.",
   },
 };
 
