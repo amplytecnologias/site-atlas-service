@@ -83,7 +83,11 @@ export function Servicos() {
                   </ul>
                 </div>
                 <div className="flex flex-col gap-3 md:items-end">
-                  <Button size="lg" className="w-full gap-2 bg-white text-brand-dark hover:bg-brand-mist md:w-auto" asChild>
+                  <Button
+                    size="lg"
+                    className="h-auto min-h-11 w-full gap-2 whitespace-normal bg-white text-brand-dark hover:bg-brand-mist md:w-auto"
+                    asChild
+                  >
                     <Link href="/servicos/locacao-e-venda">
                       Conheça as máquinas disponíveis <ArrowRight className="h-4 w-4" />
                     </Link>
@@ -91,7 +95,7 @@ export function Servicos() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full gap-2 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white md:w-auto"
+                    className="h-auto min-h-11 w-full gap-2 whitespace-normal border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white md:w-auto"
                     asChild
                   >
                     <a

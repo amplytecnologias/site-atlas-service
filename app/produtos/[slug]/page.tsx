@@ -88,13 +88,22 @@ export default async function ProdutoPage({ params }: Props) {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+                <Button
+                  size="lg"
+                  className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
+                  asChild
+                >
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="h-5 w-5" />
                     Tenho interesse neste produto
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-auto min-h-11 w-full gap-2 whitespace-normal sm:w-auto"
+                  asChild
+                >
                   <Link href="/servicos/locacao-e-venda">
                     Como funciona a locação <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -162,7 +171,7 @@ export default async function ProdutoPage({ params }: Props) {
                   Envie sua demanda de ar (vazão e pressão) e indicamos o modelo certo — sem
                   superdimensionar seu investimento.
                 </p>
-                <Button className="mt-5 w-full gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+                <Button className="mt-5 h-auto min-h-10 w-full gap-2 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="h-4 w-4" />
                     Falar com um especialista

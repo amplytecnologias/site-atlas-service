@@ -66,7 +66,11 @@ export function ComoFunciona() {
         </div>
 
         <Reveal className="mt-10 text-center" delay={0.2}>
-          <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+          <Button
+            size="lg"
+            className="h-auto min-h-11 w-full max-w-md gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
+            asChild
+          >
             <a
               href={whatsappLink("Olá! Quero entender como funciona a locação de compressor de parafuso da Atlas Service.")}
               target="_blank"

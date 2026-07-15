@@ -80,7 +80,11 @@ function Hero() {
           </div>
 
           <div className="flex w-full max-w-sm flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row">
-            <Button size="lg" className="w-full gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto" asChild>
+            <Button
+              size="lg"
+              className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
+              asChild
+            >
               <a href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5" />
                 Orçamento no WhatsApp
@@ -90,7 +94,7 @@ function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full gap-3 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white sm:w-auto"
+              className="h-auto min-h-11 w-full gap-3 whitespace-normal border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white sm:w-auto"
               asChild
             >
               <a href={PHONE_TEL}>

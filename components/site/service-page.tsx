@@ -49,7 +49,11 @@ export function ServicePage({ data, children }: { data: ServicePageData; childre
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-brand-mist">{data.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+            <Button
+              size="lg"
+              className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
+              asChild
+            >
               <a href={whatsappLink(data.ctaMessage)} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5" />
                 Orçamento no WhatsApp
@@ -58,7 +62,7 @@ export function ServicePage({ data, children }: { data: ServicePageData; childre
             <Button
               size="lg"
               variant="outline"
-              className="gap-3 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white"
+              className="h-auto min-h-11 w-full gap-3 whitespace-normal border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white sm:w-auto"
               asChild
             >
               <Link href="/#servicos">
@@ -138,7 +142,11 @@ export function ServicePage({ data, children }: { data: ServicePageData; childre
               </h2>
               <p className="relative mx-auto mt-4 max-w-xl leading-relaxed text-brand-mist">{data.ctaText}</p>
               <div className="relative mt-8 flex justify-center">
-                <Button size="lg" className="gap-3 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
+                <Button
+                  size="lg"
+                  className="h-auto min-h-11 w-full max-w-md gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
+                  asChild
+                >
                   <a href={whatsappLink(data.ctaMessage)} target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="h-5 w-5" />
                     Faça seu orçamento no WhatsApp
