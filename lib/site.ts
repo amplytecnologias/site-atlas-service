@@ -16,8 +16,8 @@ export const PHONE_TEL = "tel:+553135317749";
 export const EMAIL = "contato@atlasservicemg.com.br";
 export const EMAIL_MAILTO = `mailto:${EMAIL}`;
 
-export const ADDRESS = "R. Pernambuco, 177 – Vila Universal, Betim/MG";
-export const ADDRESS_COORDS = { lat: -19.9686, lng: -44.1986 };
+export const ADDRESS = "Rua Pernambuco, 177 – Vila Universal, Betim/MG – CEP 32678-024";
+export const ADDRESS_COORDS = { lat: -19.9347, lng: -44.1072 };
 
 // Perfil da Atlas Service Compressores no Google (avaliações e informações).
 // Resolvido a partir do link compartilhado https://share.google/Rlee3ZdG654OmMJKd

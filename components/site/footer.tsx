@@ -96,7 +96,10 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} Atlas Service — Compressores de parafuso. Todos os direitos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} Atlas Service — Compressores de parafuso · CNPJ 11.452.793/0001-04. Todos os
+            direitos reservados.
+          </p>
           <p className="tracking-wide text-white/50">Aluguel · Venda · Filtros e óleo · Manutenção</p>
         </div>
       </div>

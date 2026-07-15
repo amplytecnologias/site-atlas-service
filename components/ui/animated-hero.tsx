@@ -51,7 +51,7 @@ function Hero() {
           <div className="flex flex-col gap-4">
             <span className="mx-auto inline-flex items-center gap-2 rounded-full border-2 border-teal-light/60 bg-brand-ink/55 px-5 py-2 text-sm font-extrabold uppercase tracking-[0.18em] text-teal-light shadow-lg shadow-brand-ink/30 backdrop-blur-sm md:text-base">
               <BadgeCheck className="h-5 w-5" aria-hidden />
-              16 anos de atividade
+              16 anos no mercado
             </span>
             <h1 className="mx-auto max-w-3xl text-center font-display text-4xl font-medium tracking-tighter text-white sm:text-5xl md:text-7xl">
               <span className="relative flex h-[1.4em] w-full justify-center overflow-hidden text-center">
