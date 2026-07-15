@@ -17,8 +17,8 @@ export function Produtos() {
             Máquinas prontas para entrar em operação
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Compressores de parafuso Atlas Service revisados, disponíveis para venda e também para locação.
-            Clique no modelo para ver todas as especificações técnicas.
+            Nossa linha de compressores de parafuso rotativo, de 10 a 120 hp, disponível para venda e
+            também para locação. Clique no modelo para ver todas as especificações técnicas.
           </p>
         </Reveal>
 
@@ -55,19 +55,29 @@ export function Produtos() {
           ))}
         </div>
 
-        <Reveal className="mt-10 text-center" delay={0.2}>
-          <p className="text-sm text-muted-foreground">
-            Não encontrou o modelo ideal? Trabalhamos com outras potências e configurações —{" "}
+        {/* Destaque: atendemos outras marcas e modelos além da linha própria */}
+        <Reveal className="mt-12" delay={0.2}>
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-ink via-brand-dark to-brand px-6 py-10 text-center text-white shadow-xl shadow-brand/20 md:px-12">
+            <span className="inline-flex items-center gap-2 rounded-full border border-teal-light/50 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-teal-light backdrop-blur-sm">
+              Não encontrou o que procura?
+            </span>
+            <h3 className="mx-auto mt-4 max-w-2xl font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+              Trabalhamos com outras marcas e modelos
+            </h3>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
+              Além da nossa linha, vendemos, alugamos e damos assistência técnica em compressores de
+              parafuso de diversas marcas, potências e configurações. Conte sua demanda que a gente
+              encontra a máquina certa.
+            </p>
             <a
-              href={whatsappLink("Olá! Procuro um compressor de parafuso com uma configuração específica. Podem me ajudar?")}
+              href={whatsappLink("Olá! Procuro um compressor de parafuso de outra marca/modelo. Podem me ajudar?")}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-brand underline-offset-4 hover:underline"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-whatsapp-dark"
             >
-              fale com a gente no WhatsApp
+              Consultar outras marcas e modelos
             </a>
-            .
-          </p>
+          </div>
         </Reveal>
       </div>
     </section>
