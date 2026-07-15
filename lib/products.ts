@@ -1,7 +1,7 @@
 // Catálogo de produtos da Atlas Service — linha nova de compressores de parafuso
 // rotativo (10A a 120A). Dados técnicos extraídos da ficha técnica oficial do
-// fornecedor (PDF em /material-fornecedor/compressores-novo, fora da pasta
-// pública). A marca do fabricante não é citada no site, a pedido do cliente.
+// fornecedor (PDF guardado FORA do repositório, em Desktop\work\atlas-service-fornecedor,
+// pois o repo é público). A marca do fabricante não é citada no site, a pedido do cliente.
 // Fotos em /public/produtos/<slug>/. Obs.: o 120A usa a mesma foto do 100A
 // (mesmo gabinete — foto própria ainda não disponível).
 // Preços não são exibidos no site: o cliente é direcionado ao WhatsApp.

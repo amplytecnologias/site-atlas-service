@@ -6,3 +6,6 @@ out
 
 .vercel
 .env*
+
+# Material do fornecedor (marca/contato de terceiros) — nunca commitar: o repo é público
+material-fornecedor
