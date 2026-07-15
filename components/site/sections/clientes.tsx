@@ -5,9 +5,10 @@ import { useInView } from "framer-motion";
 import { Reveal } from "@/components/site/reveal";
 
 // Logos reais de empresas que usam os produtos da Atlas Service.
-// Exibidas em preto e branco (grayscale via CSS). Com a seção visível na tela,
-// uma logo de cada vez "acende" colorida, em rodízio (pedido do cliente —
-// no celular não existe hover). No desktop o hover também colore.
+// Exibidas em preto e branco (grayscale via CSS). Quando a seção aparece na
+// tela, cada logo "acende" colorida uma vez, em sequência da primeira à última,
+// e a animação termina (pedido do cliente — roda uma única vez, sem loop).
+// No desktop o hover também colore.
 const clients = [
   { name: "Ical", logo: "/clientes/ical.webp" },
   { name: "Aethra Automotive Systems", logo: "/clientes/aethra.png" },
@@ -19,18 +20,26 @@ export function Clientes() {
   const listRef = useRef<HTMLDivElement>(null);
   const inView = useInView(listRef, { amount: 0.5 });
   const [active, setActive] = useState(-1);
+  const played = useRef(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   useEffect(() => {
-    if (!inView) {
-      setActive(-1);
-      return;
-    }
+    if (!inView || played.current) return;
+    played.current = true;
     setActive(0);
-    const id = setInterval(() => {
-      setActive((current) => (current + 1) % clients.length);
+    intervalRef.current = setInterval(() => {
+      setActive((current) => {
+        if (current >= clients.length - 1) {
+          clearInterval(intervalRef.current);
+          return -1; // apaga a última e encerra
+        }
+        return current + 1;
+      });
     }, 1500);
-    return () => clearInterval(id);
   }, [inView]);
+
+  // Limpa o timer apenas se a página for trocada no meio da sequência.
+  useEffect(() => () => clearInterval(intervalRef.current), []);
 
   return (
     <section className="border-y border-brand-mist/60 bg-background py-10">
