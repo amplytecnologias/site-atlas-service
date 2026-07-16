@@ -35,7 +35,7 @@ export function Clientes() {
         }
         return current + 1;
       });
-    }, 1500);
+    }, 900);
   }, [inView]);
 
   // Limpa o timer apenas se a página for trocada no meio da sequência.
@@ -58,7 +58,7 @@ export function Clientes() {
                 src={client.logo}
                 alt={`Logo ${client.name}`}
                 loading="lazy"
-                className={`h-12 w-auto max-w-[180px] object-contain transition-all duration-700 hover:opacity-100 hover:grayscale-0 ${
+                className={`h-12 w-auto max-w-[180px] object-contain transition-all duration-400 hover:opacity-100 hover:grayscale-0 ${
                   active === index ? "scale-110 opacity-100 grayscale-0" : "opacity-75 grayscale"
                 }`}
               />
