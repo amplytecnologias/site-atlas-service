@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackFormSubmit } from "@/lib/gtag";
 import { EMAIL } from "@/lib/site";
 
 const serviceOptions = [
@@ -32,6 +33,8 @@ export function ContactForm() {
       `Serviço de interesse: ${data.get("servico")}`,
       data.get("mensagem") ? `Mensagem: ${data.get("mensagem")}` : null,
     ].filter(Boolean);
+    // Registra a conversão no Google Ads antes de abrir o cliente de e-mail.
+    trackFormSubmit();
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
     setSent(true);
   }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/site/reveal";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { products } from "@/lib/products";
 import { whatsappLink } from "@/lib/site";
 
@@ -69,14 +70,12 @@ export function Produtos() {
               parafuso de diversas marcas, potências e configurações. Conte sua demanda que a gente
               encontra a máquina certa.
             </p>
-            <a
+            <WhatsAppLink
               href={whatsappLink("Olá! Procuro um compressor de parafuso de outra marca/modelo. Podem me ajudar?")}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-whatsapp-dark"
             >
               Consultar outras marcas e modelos
-            </a>
+            </WhatsAppLink>
           </div>
         </Reveal>
       </div>

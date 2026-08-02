@@ -3,6 +3,7 @@ import { ArrowRight, CalendarClock, Check, Droplets, Wrench } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { whatsappLink } from "@/lib/site";
 
 const locacaoVendaBullets = [
@@ -98,13 +99,11 @@ export function Servicos() {
                     className="h-auto min-h-11 w-full gap-2 whitespace-normal border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white md:w-auto"
                     asChild
                   >
-                    <a
+                    <WhatsAppLink
                       href={whatsappLink("Olá! Quero um orçamento de compressor de parafuso (locação ou venda).")}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <WhatsAppIcon className="h-4 w-4" /> Orçamento no WhatsApp
-                    </a>
+                    </WhatsAppLink>
                   </Button>
                 </div>
               </div>

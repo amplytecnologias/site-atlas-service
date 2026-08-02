@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ProductGallery } from "@/components/site/product-gallery";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { availabilityNote, getProduct, products, productWhatsAppMessage } from "@/lib/products";
 import { whatsappLink } from "@/lib/site";
 
@@ -93,10 +94,10 @@ export default async function ProdutoPage({ params }: Props) {
                   className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
                   asChild
                 >
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppLink href={whatsappUrl}>
                     <WhatsAppIcon className="h-5 w-5" />
                     Tenho interesse neste produto
-                  </a>
+                  </WhatsAppLink>
                 </Button>
                 <Button
                   size="lg"
@@ -172,10 +173,10 @@ export default async function ProdutoPage({ params }: Props) {
                   superdimensionar seu investimento.
                 </p>
                 <Button className="mt-5 h-auto min-h-10 w-full gap-2 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppLink href={whatsappUrl}>
                     <WhatsAppIcon className="h-4 w-4" />
                     Falar com um especialista
-                  </a>
+                  </WhatsAppLink>
                 </Button>
               </div>
             </Reveal>

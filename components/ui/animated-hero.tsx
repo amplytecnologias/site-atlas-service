@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BadgeCheck, CalendarClock, Droplets, MoveRight, PhoneCall, Tag, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
 import { DEFAULT_WHATSAPP_MESSAGE, PHONE_TEL, whatsappLink } from "@/lib/site";
 
 const serviceChips = [
@@ -85,11 +86,11 @@ function Hero() {
               className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
               asChild
             >
-              <a href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">
+              <WhatsAppLink href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}>
                 <WhatsAppIcon className="h-5 w-5" />
                 Orçamento no WhatsApp
                 <MoveRight className="h-4 w-4" />
-              </a>
+              </WhatsAppLink>
             </Button>
             <Button
               size="lg"
@@ -97,9 +98,9 @@ function Hero() {
               className="h-auto min-h-11 w-full gap-3 whitespace-normal border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white sm:w-auto"
               asChild
             >
-              <a href={PHONE_TEL}>
+              <PhoneLink href={PHONE_TEL}>
                 Ligar agora <PhoneCall className="h-4 w-4" />
-              </a>
+              </PhoneLink>
             </Button>
           </div>
 

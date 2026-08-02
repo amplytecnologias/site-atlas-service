@@ -2,6 +2,7 @@ import { BadgeCheck, HardHat, MapPin, Wrench, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { whatsappLink } from "@/lib/site";
 
 const differentials = [
@@ -74,14 +75,12 @@ export function PorQue() {
                 </p>
               </div>
               <Button className="mt-6 gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark" asChild>
-                <a
+                <WhatsAppLink
                   href={whatsappLink("Olá! Quero falar sobre compressores de parafuso para a minha operação.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <WhatsAppIcon className="h-4 w-4" />
                   Chamar no WhatsApp
-                </a>
+                </WhatsAppLink>
               </Button>
             </div>
           </Reveal>

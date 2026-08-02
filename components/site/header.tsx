@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
 
 const sections = [
@@ -120,15 +121,10 @@ export function Header() {
 
               <motion.div variants={itemVariants} className="mt-5">
                 <Button asChild className="w-full gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark">
-                  <a
-                    href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeMenu}
-                  >
+                  <WhatsAppLink href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)} onClick={closeMenu}>
                     <WhatsAppIcon className="h-4 w-4" />
                     Orçamento no WhatsApp
-                  </a>
+                  </WhatsAppLink>
                 </Button>
               </motion.div>
             </motion.nav>

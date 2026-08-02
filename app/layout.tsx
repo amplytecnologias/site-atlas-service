@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
+import { GA_ADS_ID } from "@/lib/gtag";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" });
@@ -52,6 +54,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="light">
       <body className={`${inter.variable} ${montserrat.variable} font-sans`}>
+        {/* Google Ads — Tag do Google (gtag.js), carregada uma única vez */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ADS_ID}');
+          `}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />

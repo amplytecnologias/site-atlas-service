@@ -4,6 +4,7 @@ import { Reveal } from "@/components/site/reveal";
 import { ContactForm } from "@/components/site/contact-form";
 import { ContactMapLazy } from "@/components/site/contact-map-lazy";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
 import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 
 type ContactItem = {
@@ -81,17 +82,23 @@ export function Contato() {
                     </span>
                   </span>
                 );
+                const linkClass = "block transition-opacity hover:opacity-80";
                 return (
                   <li key={item.label} className="rounded-xl border border-brand-mist bg-background p-4">
                     {item.href ? (
-                      <a
-                        href={item.href}
-                        target={item.external ? "_blank" : undefined}
-                        rel={item.external ? "noopener noreferrer" : undefined}
-                        className="block transition-opacity hover:opacity-80"
-                      >
-                        {content}
-                      </a>
+                      item.href.startsWith("tel:") ? (
+                        <PhoneLink href={item.href} className={linkClass}>
+                          {content}
+                        </PhoneLink>
+                      ) : item.href.includes("wa.me") ? (
+                        <WhatsAppLink href={item.href} className={linkClass}>
+                          {content}
+                        </WhatsAppLink>
+                      ) : (
+                        <a href={item.href} className={linkClass}>
+                          {content}
+                        </a>
+                      )
                     ) : (
                       content
                     )}

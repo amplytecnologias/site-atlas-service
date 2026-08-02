@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { whatsappLink } from "@/lib/site";
 
 const steps = [
@@ -71,14 +72,12 @@ export function ComoFunciona() {
             className="h-auto min-h-11 w-full max-w-md gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
             asChild
           >
-            <a
+            <WhatsAppLink
               href={whatsappLink("Olá! Quero entender como funciona a locação de compressor de parafuso da Atlas Service.")}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <WhatsAppIcon className="h-5 w-5" />
               Começar meu orçamento agora
-            </a>
+            </WhatsAppLink>
           </Button>
         </Reveal>
       </div>

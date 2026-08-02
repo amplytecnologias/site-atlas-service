@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
 import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
 
 const navigation = [
@@ -65,21 +66,19 @@ export function Footer() {
             <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Contato</h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <a href={PHONE_TEL} className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light">
+                <PhoneLink href={PHONE_TEL} className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light">
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-teal-light" />
                   {PHONE_DISPLAY}
-                </a>
+                </PhoneLink>
               </li>
               <li>
-                <a
+                <WhatsAppLink
                   href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light"
                 >
                   <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-teal-light" />
                   Orçamento no WhatsApp
-                </a>
+                </WhatsAppLink>
               </li>
               <li>
                 <a href={EMAIL_MAILTO} className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light">

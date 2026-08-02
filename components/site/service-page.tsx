@@ -4,6 +4,7 @@ import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
+import { WhatsAppLink } from "@/components/site/tracked-links";
 import { whatsappLink } from "@/lib/site";
 
 export type ServicePageData = {
@@ -54,10 +55,10 @@ export function ServicePage({ data, children }: { data: ServicePageData; childre
               className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
               asChild
             >
-              <a href={whatsappLink(data.ctaMessage)} target="_blank" rel="noopener noreferrer">
+              <WhatsAppLink href={whatsappLink(data.ctaMessage)}>
                 <WhatsAppIcon className="h-5 w-5" />
                 Orçamento no WhatsApp
-              </a>
+              </WhatsAppLink>
             </Button>
             <Button
               size="lg"
@@ -147,10 +148,10 @@ export function ServicePage({ data, children }: { data: ServicePageData; childre
                   className="h-auto min-h-11 w-full max-w-md gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
                   asChild
                 >
-                  <a href={whatsappLink(data.ctaMessage)} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppLink href={whatsappLink(data.ctaMessage)}>
                     <WhatsAppIcon className="h-5 w-5" />
                     Faça seu orçamento no WhatsApp
-                  </a>
+                  </WhatsAppLink>
                 </Button>
               </div>
             </div>
