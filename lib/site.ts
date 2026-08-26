@@ -3,6 +3,9 @@
 // Telefone fixo (todos os botões de ligar): (31) 3531-7749.
 // Obs.: se o WhatsApp estiver registrado com o nono dígito ((31) 98685-7749),
 // incluir o 9 em WHATSAPP_NUMBER para o link não falhar.
+// Domínio canônico do site (sem www) — usado em metadataBase, robots e sitemap.
+export const SITE_URL = "https://atlasservicemg.com.br";
+
 export const WHATSAPP_NUMBER = "553186857749";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 

@@ -6,6 +6,7 @@ import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import { GA_ADS_ID } from "@/lib/gtag";
+import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" });
@@ -19,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.atlasservice.com.br"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Atlas Service | Aluguel de Compressor de Parafuso em BH e MG",
     template: "%s | Atlas Service",
