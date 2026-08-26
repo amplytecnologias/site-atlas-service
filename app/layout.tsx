@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
+import { StructuredData } from "@/components/site/structured-data";
 import { GA_ADS_ID, GA4_ID } from "@/lib/gtag";
 import { SITE_URL } from "@/lib/site";
 
@@ -87,6 +88,7 @@ export default function RootLayout({
             gtag('config', '${GA4_ID}');
           `}
         </Script>
+        <StructuredData />
         <Header />
         <main>{children}</main>
         <Footer />
