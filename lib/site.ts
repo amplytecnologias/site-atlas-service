@@ -22,10 +22,10 @@ export const EMAIL_MAILTO = `mailto:${EMAIL}`;
 export const ADDRESS = "Rua Pernambuco, 177 – Vila Universal, Betim/MG – CEP 32678-024";
 export const ADDRESS_COORDS = { lat: -19.9347, lng: -44.1072 };
 
-// Perfil da Atlas Service Compressores no Google (avaliações e informações).
-// Resolvido a partir do link compartilhado https://share.google/Rlee3ZdG654OmMJKd
-export const GOOGLE_REVIEW_URL =
-  "https://www.google.com/search?kgmid=/g/11g4977jsp&q=Atlas+Service+Compressores&hl=pt-BR";
+// Link direto para ESCREVER avaliação no Google, obtido no painel do Perfil da
+// Empresa ("Solicitar avaliações"). Abre direto a tela das 5 estrelas — melhor
+// conversão que mandar para a busca. Usado no botão "Avaliar no Google".
+export const GOOGLE_REVIEW_URL = "https://g.page/r/CUlzqiqWP4WqEBM/review";
 
 export const DEFAULT_WHATSAPP_MESSAGE =
   "Olá! Vim pelo site da Atlas Service e gostaria de um orçamento de compressor de parafuso.";
