@@ -40,10 +40,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
+    url: "/",
     siteName: "Atlas Service",
     title: "Atlas Service | Compressores de Parafuso em BH e MG",
     description:
       "Aluguel com assistência técnica inclusa, venda, filtros, óleo e manutenção de compressores de parafuso para mineração e indústria em Minas Gerais.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Atlas Service — Aluguel e Venda de Compressores de Parafuso",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Atlas Service | Compressores de Parafuso em BH e MG",
+    description:
+      "Aluguel, venda, filtros, óleo e manutenção de compressores de parafuso para mineração e indústria em Minas Gerais.",
+    images: ["/og-image.jpg"],
   },
 };
 
