@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     template: "%s | Atlas Service",
   },
   description:
-    "Aluguel de compressor de parafuso na região metropolitana de BH e toda Minas Gerais com assistência técnica inclusa e opção de compra. Venda de máquinas, filtros, óleo e manutenção para mineração e indústria.",
+    "Aluguel de compressor de parafuso na região metropolitana de BH e em toda Minas Gerais, com assistência técnica inclusa, venda, filtros, óleo e manutenção.",
+  alternates: { canonical: "/" },
   keywords: [
     "aluguel de compressor de parafuso",
     "locação de compressor região metropolitana de BH",

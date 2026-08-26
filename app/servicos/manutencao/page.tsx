@@ -3,6 +3,7 @@ import { CalendarCheck, MapPin, Wrench } from "lucide-react";
 import { ServicePage, type ServicePageData } from "@/components/site/service-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/servicos/manutencao" },
   title: "Manutenção e Assistência Técnica de Compressor de Parafuso | MG",
   description:
     "Manutenção preventiva, corretiva e assistência técnica emergencial para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria na região metropolitana de BH e toda MG.",

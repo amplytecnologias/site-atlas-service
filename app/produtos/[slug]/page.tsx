@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return {
+    alternates: { canonical: `/produtos/${slug}` },
     title: `${product.name} — Venda e Locação em BH e MG`,
     description: `${product.shortDesc} Especificações completas, venda com garantia e locação com assistência inclusa na região metropolitana de BH e toda Minas Gerais.`,
   };

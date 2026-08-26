@@ -3,6 +3,7 @@ import { Droplets, PackageCheck, Timer } from "lucide-react";
 import { ServicePage, type ServicePageData } from "@/components/site/service-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/servicos/filtros-e-oleo" },
   title: "Filtros e Óleo para Compressor de Parafuso | BH e MG",
   description:
     "Filtros, separadores ar/óleo, válvulas, kits de reparo e óleo lubrificante para compressores de parafuso. Pronta entrega na região metropolitana de BH para toda Minas Gerais.",

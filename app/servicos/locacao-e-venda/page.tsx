@@ -4,6 +4,7 @@ import { ServicePage, type ServicePageData } from "@/components/site/service-pag
 import { Produtos } from "@/components/site/sections/produtos";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/servicos/locacao-e-venda" },
   title: "Locação e Venda de Compressor de Parafuso em BH e MG",
   description:
     "Compressores de ar de parafuso Atlas Service revisados, disponíveis para locação com assistência técnica inclusa e para venda com garantia. Atendemos a região metropolitana de BH e toda Minas Gerais.",
