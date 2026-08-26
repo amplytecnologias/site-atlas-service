@@ -5,6 +5,10 @@
 
 export const GA_ADS_ID = "AW-18360862897";
 
+// Google Analytics 4 (medição de tráfego) — convive com o Google Ads no mesmo
+// gtag.js; não interfere nas conversões do Ads (IDs e eventos separados).
+export const GA4_ID = "G-60F6P14YWC";
+
 // Rótulos de conversão de cada ação (fornecidos pelo Google Ads).
 const CONVERSION_LABELS = {
   whatsapp: "m3guCJuX6NocELGRkrNE",

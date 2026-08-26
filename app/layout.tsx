@@ -5,7 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
-import { GA_ADS_ID } from "@/lib/gtag";
+import { GA_ADS_ID, GA4_ID } from "@/lib/gtag";
 import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -71,17 +71,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="light">
       <body className={`${inter.variable} ${montserrat.variable} font-sans`}>
-        {/* Google Ads — Tag do Google (gtag.js), carregada uma única vez */}
+        {/* Tag do Google (gtag.js) carregada uma única vez — serve o Google Ads
+            (conversões) e o GA4 (tráfego) lado a lado */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}
           strategy="afterInteractive"
         />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="google-gtag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_ADS_ID}');
+            gtag('config', '${GA4_ID}');
           `}
         </Script>
         <Header />
