@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { WhatsAppLink } from "@/components/site/tracked-links";
-import { DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
+import { useLinkWhatsApp } from "@/components/whatsapp-origem";
 
 const sections = [
   { href: "/", label: "Home" },
@@ -42,6 +42,7 @@ const itemVariants = {
 } as const;
 
 export function Header() {
+  const linkWhatsApp = useLinkWhatsApp();
   const [open, setOpen] = useState(false);
   const closeMenu = () => setOpen(false);
 
@@ -121,7 +122,7 @@ export function Header() {
 
               <motion.div variants={itemVariants} className="mt-5">
                 <Button asChild className="w-full gap-2 bg-whatsapp text-white hover:bg-whatsapp-dark">
-                  <WhatsAppLink href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)} onClick={closeMenu}>
+                  <WhatsAppLink href={linkWhatsApp} onClick={closeMenu}>
                     <WhatsAppIcon className="h-4 w-4" />
                     Orçamento no WhatsApp
                   </WhatsAppLink>

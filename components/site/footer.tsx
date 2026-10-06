@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
-import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
+import { ADDRESS, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { useLinkWhatsApp } from "@/components/whatsapp-origem";
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -20,6 +23,7 @@ const services = [
 ];
 
 export function Footer() {
+  const linkWhatsApp = useLinkWhatsApp();
   return (
     <footer className="bg-brand-ink text-white/70">
       <div className="container mx-auto px-4 pb-8 pt-16 md:px-6">
@@ -73,7 +77,7 @@ export function Footer() {
               </li>
               <li>
                 <WhatsAppLink
-                  href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}
+                  href={linkWhatsApp}
                   className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light"
                 >
                   <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-teal-light" />

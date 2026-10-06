@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentType } from "react";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
@@ -5,7 +7,8 @@ import { ContactForm } from "@/components/site/contact-form";
 import { ContactMapLazy } from "@/components/site/contact-map-lazy";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
-import { ADDRESS, DEFAULT_WHATSAPP_MESSAGE, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/site";
+import { ADDRESS, EMAIL, EMAIL_MAILTO, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { useLinkWhatsApp } from "@/components/whatsapp-origem";
 
 type ContactItem = {
   icon: ComponentType<{ className?: string }>;
@@ -26,7 +29,6 @@ const contactItems: ContactItem[] = [
     icon: WhatsAppIcon,
     label: "WhatsApp",
     value: "Orçamento rápido por mensagem",
-    href: whatsappLink(DEFAULT_WHATSAPP_MESSAGE),
     external: true,
   },
   {
@@ -48,6 +50,7 @@ const contactItems: ContactItem[] = [
 ];
 
 export function Contato() {
+  const linkWhatsApp = useLinkWhatsApp();
   return (
     <section id="contato" className="scroll-mt-24 bg-white py-14">
       <div className="container mx-auto px-4 md:px-6">
@@ -67,6 +70,7 @@ export function Contato() {
 
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {contactItems.map((item) => {
+                const href = item.label === "WhatsApp" ? linkWhatsApp : item.href;
                 const content = (
                   <span className="flex items-start gap-3.5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand">
@@ -85,17 +89,17 @@ export function Contato() {
                 const linkClass = "block transition-opacity hover:opacity-80";
                 return (
                   <li key={item.label} className="rounded-xl border border-brand-mist bg-background p-4">
-                    {item.href ? (
-                      item.href.startsWith("tel:") ? (
-                        <PhoneLink href={item.href} className={linkClass}>
+                    {href ? (
+                      href.startsWith("tel:") ? (
+                        <PhoneLink href={href} className={linkClass}>
                           {content}
                         </PhoneLink>
-                      ) : item.href.includes("wa.me") ? (
-                        <WhatsAppLink href={item.href} className={linkClass}>
+                      ) : href.includes("wa.me") ? (
+                        <WhatsAppLink href={href} className={linkClass}>
                           {content}
                         </WhatsAppLink>
                       ) : (
-                        <a href={item.href} className={linkClass}>
+                        <a href={href} className={linkClass}>
                           {content}
                         </a>
                       )

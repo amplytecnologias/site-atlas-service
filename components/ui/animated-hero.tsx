@@ -5,7 +5,8 @@ import { BadgeCheck, CalendarClock, Droplets, MoveRight, PhoneCall, Tag, Wrench 
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { PhoneLink, WhatsAppLink } from "@/components/site/tracked-links";
-import { DEFAULT_WHATSAPP_MESSAGE, PHONE_TEL, whatsappLink } from "@/lib/site";
+import { PHONE_TEL } from "@/lib/site";
+import { useLinkWhatsApp } from "@/components/whatsapp-origem";
 
 const serviceChips = [
   { icon: CalendarClock, label: "Aluguel com assistência inclusa" },
@@ -15,6 +16,7 @@ const serviceChips = [
 ];
 
 function Hero() {
+  const linkWhatsApp = useLinkWhatsApp();
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(() => ["Aluguel", "Venda", "Filtros", "Manutenção"], []);
 
@@ -86,7 +88,7 @@ function Hero() {
               className="h-auto min-h-11 w-full gap-3 whitespace-normal bg-whatsapp text-white hover:bg-whatsapp-dark sm:w-auto"
               asChild
             >
-              <WhatsAppLink href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}>
+              <WhatsAppLink href={linkWhatsApp}>
                 <WhatsAppIcon className="h-5 w-5" />
                 Orçamento no WhatsApp
                 <MoveRight className="h-4 w-4" />
