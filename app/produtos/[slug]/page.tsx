@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ClipboardList } from "lucide-react";
@@ -9,6 +10,7 @@ import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { WhatsAppLink } from "@/components/site/tracked-links";
 import { availabilityNote, getProduct, products, productWhatsAppMessage } from "@/lib/products";
 import { whatsappLink } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,11 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) return {};
-  return {
-    alternates: { canonical: `/produtos/${slug}` },
-    title: `${product.name} — Venda e Locação em BH e MG`,
-    description: `${product.shortDesc} Especificações completas, venda com garantia e locação com assistência inclusa na região metropolitana de BH e toda Minas Gerais.`,
-  };
+  const hp = product.quickSpecs.find((spec) => spec.label === "Potência")?.value ?? "";
+  const vazao = product.quickSpecs.find((spec) => spec.label === "Vazão")?.value ?? "";
+  const model = product.name.replace("Compressor de Parafuso ", "");
+  return pageMetadata({
+    title: `${product.name}: Venda e Locação em MG`,
+    description: `Compressor de parafuso ${model} de ${hp}, ${vazao}, 8 a 10 bar. Venda e locação com assistência técnica para indústria e mineração em MG.`,
+    path: `/produtos/${slug}`,
+  });
 }
 
 export default async function ProdutoPage({ params }: Props) {
@@ -34,6 +39,7 @@ export default async function ProdutoPage({ params }: Props) {
 
   const related = products.filter((item) => item.slug !== product.slug).slice(0, 3);
   const whatsappUrl = whatsappLink(productWhatsAppMessage(product.name));
+  const model = product.name.replace("Compressor de Parafuso ", "");
 
   return (
     <>
@@ -165,6 +171,15 @@ export default async function ProdutoPage({ params }: Props) {
                 ))}
               </ul>
 
+              <div className="mt-6 flex flex-col gap-2 text-sm">
+                <Link href="/servicos/manutencao" className="inline-flex items-center gap-2 font-semibold text-brand hover:text-brand-dark">
+                  Manutenção do compressor de parafuso {model} <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link href="/servicos/filtros-e-oleo" className="inline-flex items-center gap-2 font-semibold text-brand hover:text-brand-dark">
+                  Filtros e óleo para compressor de parafuso <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
               <div className="mt-8 rounded-2xl bg-gradient-to-br from-brand-ink to-brand-dark p-7 text-white">
                 <h3 className="font-display text-lg font-bold tracking-tight">
                   Na dúvida sobre o dimensionamento?
@@ -197,7 +212,7 @@ export default async function ProdutoPage({ params }: Props) {
                 href="/#produtos"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark"
               >
-                Ver catálogo completo <ArrowRight className="h-4 w-4" />
+                Ver todos os compressores de parafuso <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </Reveal>
@@ -205,13 +220,14 @@ export default async function ProdutoPage({ params }: Props) {
             {related.map((item, index) => (
               <Reveal key={item.slug} delay={0.08 * index}>
                 <Link href={`/produtos/${item.slug}`} className="group flex h-full flex-col">
-                  <div className="overflow-hidden rounded-2xl border border-brand/25 bg-white p-2.5 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-brand group-hover:shadow-lg group-hover:shadow-brand/15">
-                    <div className="h-40 overflow-hidden rounded-xl">
-                      <img
+                  <div className="overflow-hidden rounded-2xl border border-brand/25 bg-white p-2.5 lift-card group-hover:border-brand">
+                    <div className="relative h-40 overflow-hidden rounded-xl">
+                      <Image
                         src={item.image}
                         alt={item.imageAlt}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                        className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-105"
                       />
                     </div>
                   </div>

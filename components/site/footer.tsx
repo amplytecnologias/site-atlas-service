@@ -34,14 +34,17 @@ export function Footer() {
                 Atlas <span className="text-teal-light">Service</span>
               </span>
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed">
+            <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-light">
+              Compressores de parafuso industriais
+            </p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed">
               Aluguel, venda, filtros e manutenção de compressores de ar de parafuso para mineração e
-              indústria.
+              indústria em Minas Gerais.
             </p>
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Navegação</h3>
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Navegação</h2>
             <ul className="mt-4 space-y-2.5">
               {navigation.map((item) => (
                 <li key={item.href}>
@@ -54,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Serviços</h3>
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Serviços</h2>
             <ul className="mt-4 space-y-2.5">
               {services.map((item) => (
                 <li key={item.href}>
@@ -67,7 +70,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Contato</h3>
+            <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">Contato</h2>
             <ul className="mt-4 space-y-3">
               <li>
                 <PhoneLink href={PHONE_TEL} className="flex items-start gap-2.5 text-sm transition-colors hover:text-teal-light">

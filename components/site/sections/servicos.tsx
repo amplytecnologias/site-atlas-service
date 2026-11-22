@@ -18,6 +18,7 @@ const otherServices = [
     icon: Droplets,
     accent: "text-brand-teal bg-brand-teal/10",
     title: "Filtros e óleo",
+    linkText: "Ver filtros e óleo para compressor de parafuso",
     desc: "Filtros, separadores, válvulas, kits de reparo e óleo específico para compressores de parafuso — pronta entrega na região metropolitana de BH.",
   },
   {
@@ -25,6 +26,7 @@ const otherServices = [
     icon: Wrench,
     accent: "text-brand-indigo bg-brand-indigo/10",
     title: "Manutenção / Assistência",
+    linkText: "Ver manutenção de compressor de parafuso",
     desc: "Preventiva, corretiva e assistência técnica em campo. Atendemos contratos e chamados avulsos em toda MG.",
   },
 ];
@@ -43,8 +45,8 @@ export function Servicos() {
             Tudo o que sua operação precisa em ar comprimido
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Da locação emergencial ao contrato de manutenção de longo prazo — uma única empresa cuidando da
-            sua sala de compressores.
+            Para indústrias e mineradoras que não podem parar: da locação emergencial ao contrato de
+            manutenção de longo prazo, uma única empresa cuidando da sua sala de compressores de parafuso.
           </p>
         </Reveal>
 
@@ -112,7 +114,7 @@ export function Servicos() {
 
           {otherServices.map((service, index) => (
             <Reveal key={service.href} delay={0.08 * (index + 1)}>
-              <div className="group flex h-full flex-col rounded-2xl border border-brand-mist bg-background p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+              <div className="lift-card group flex h-full flex-col rounded-2xl border border-brand-mist bg-background p-8 hover:border-brand">
                 <span className={`flex h-13 w-13 items-center justify-center rounded-xl p-3 ${service.accent}`}>
                   <service.icon className="h-7 w-7" />
                 </span>
@@ -122,8 +124,8 @@ export function Servicos() {
                   href={service.href}
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand transition-colors group-hover:text-brand-dark"
                 >
-                  Saiba mais
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  {service.linkText}
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-[var(--ease-out)] group-hover:translate-x-1" />
                 </Link>
               </div>
             </Reveal>

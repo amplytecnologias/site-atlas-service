@@ -1,22 +1,29 @@
 import type { Metadata } from "next";
 import { CalendarCheck, MapPin, Wrench } from "lucide-react";
 import { ServicePage, type ServicePageData } from "@/components/site/service-page";
+import { serviceQualifiers } from "@/lib/config";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/servicos/manutencao" },
-  title: "Manutenção e Assistência Técnica de Compressor de Parafuso | MG",
+export const metadata: Metadata = pageMetadata({
+  title: "Manutenção de Compressor de Parafuso em MG | Atlas Service",
   description:
-    "Manutenção preventiva, corretiva e assistência técnica emergencial para compressores de ar de parafuso. Contratos e chamados avulsos para mineração e indústria na região metropolitana de BH e toda MG.",
-};
+    "Manutenção preventiva, corretiva e assistência técnica de compressores de parafuso industriais para mineração e indústria em BH e toda MG.",
+  path: "/servicos/manutencao",
+});
 
 const data: ServicePageData = {
+  path: "/servicos/manutencao",
+  schema: ["manutencao"],
   badge: "Manutenção / Assistência",
   title: "Manutenção e assistência técnica",
   highlight: "em toda Minas Gerais",
+  // "Equipe especializada" (e não "própria") até o cliente confirmar.
   intro:
-    "Equipe própria especializada em compressores de parafuso para manutenção preventiva, corretiva e atendimento emergencial em campo. Atendemos por contrato ou chamado avulso — na sua empresa, em qualquer região de MG.",
+    "Equipe especializada em compressores de parafuso para manutenção preventiva, corretiva e atendimento emergencial em campo. Atendemos indústrias e mineradoras que não podem parar, por contrato ou chamado avulso, na sua empresa, em qualquer região de MG.",
+  qualifiers: serviceQualifiers(),
   image: "/images/par-de-rotores.jpg",
   imageAlt: "Par de rotores de compressor de parafuso revisado pela Atlas Service",
+  bulletsTitle: "Como funciona a manutenção da Atlas Service",
   bullets: [
     {
       icon: CalendarCheck,
@@ -43,7 +50,7 @@ const data: ServicePageData = {
     "Contratos de manutenção com condições especiais",
     "Assistência técnica prioritária para clientes de contrato",
   ],
-  ctaTitle: "Compressor parado ou revisão vencendo?",
+  ctaTitle: "Compressor de parafuso parado ou revisão vencendo?",
   ctaText: "Chame agora no WhatsApp: diagnóstico rápido e técnico a caminho da sua empresa.",
   ctaMessage: "Olá! Preciso de MANUTENÇÃO/ASSISTÊNCIA para compressor de parafuso.",
 };

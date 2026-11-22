@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 import { Reveal } from "@/components/site/reveal";
 
 // Logos reais de empresas que usam os produtos da Atlas Service.

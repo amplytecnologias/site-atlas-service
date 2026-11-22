@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check, Gauge } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
 
@@ -15,12 +16,15 @@ export function QuemSomos() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="relative">
             <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-2xl border-2 border-brand-mist md:block" aria-hidden />
-            <img
-              src="/images/par-de-rotores.jpg"
-              alt="Par de rotores de compressor de parafuso — o coração da máquina"
-              className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-xl shadow-brand-ink/15"
-              loading="lazy"
-            />
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl shadow-brand-ink/15">
+              <Image
+                src="/images/par-de-rotores.jpg"
+                alt="Par de rotores de compressor de parafuso, o coração da máquina"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
             <div className="absolute -bottom-6 right-4 flex items-center gap-3 rounded-xl bg-brand-ink px-5 py-4 text-white shadow-lg md:right-8">
               <Gauge className="h-8 w-8 text-teal-light" />
               <div>
@@ -45,7 +49,7 @@ export function QuemSomos() {
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Nosso foco é o B2B: mineradoras, siderúrgicas, metalúrgicas e plantas industriais de todos os
-              portes. Atendemos todo o Brasil e viajamos até a sua operação, do orçamento à entrega técnica
+              portes, operações em que o ar comprimido não pode faltar. Atendemos todo o Brasil e viajamos até a sua operação, do orçamento à entrega técnica
               da máquina.
             </p>
             <ul className="mt-7 space-y-3">

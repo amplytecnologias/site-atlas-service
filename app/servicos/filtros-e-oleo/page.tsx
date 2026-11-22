@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
 import { Droplets, PackageCheck, Timer } from "lucide-react";
 import { ServicePage, type ServicePageData } from "@/components/site/service-page";
+import { serviceQualifiers } from "@/lib/config";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/servicos/filtros-e-oleo" },
+export const metadata: Metadata = pageMetadata({
   title: "Filtros e Óleo para Compressor de Parafuso | BH e MG",
   description:
-    "Filtros, separadores ar/óleo, válvulas, kits de reparo e óleo lubrificante para compressores de parafuso. Pronta entrega na região metropolitana de BH para toda Minas Gerais.",
-};
+    "Peças, filtros, separadores ar/óleo e óleo para compressores de parafuso industriais. Pronta entrega em BH e envio para toda Minas Gerais.",
+  path: "/servicos/filtros-e-oleo",
+});
 
 const data: ServicePageData = {
+  path: "/servicos/filtros-e-oleo",
+  schema: ["filtrosOleo"],
   badge: "Filtros e Óleo",
   title: "Filtros e óleo",
   highlight: "para compressores de parafuso",
   intro:
-    "Filtros de ar e de óleo, separadores ar/óleo, válvulas, kits de reparo e lubrificantes específicos para compressores de parafuso — com orientação técnica de quem mantém essas máquinas todos os dias.",
+    "Peças, filtros e óleo para compressores de parafuso. Filtros de ar e de óleo, separadores ar/óleo, válvulas, kits de reparo e lubrificantes específicos, com orientação técnica de quem mantém essas máquinas na indústria e na mineração todos os dias.",
+  qualifiers: serviceQualifiers(),
   image: "/images/sala-de-compressores.jpg",
-  imageAlt: "Sala de compressores de parafuso montada pela Atlas Service",
+  imageAlt: "Sala de compressores de parafuso industriais em operação",
+  bulletsTitle: "Por que comprar filtros e óleo na Atlas Service",
   bullets: [
     {
       icon: PackageCheck,
@@ -43,8 +49,9 @@ const data: ServicePageData = {
     "Correias, mangueiras e conexões",
     "Orientação técnica para aplicação correta de cada item",
   ],
-  ctaTitle: "Precisa de filtro, peça ou óleo com urgência?",
-  ctaText: "Mande o modelo do seu compressor e o item que precisa — respondemos rápido com preço e prazo.",
+  ctaTitle: "Precisa de filtro, peça ou óleo para o seu compressor de parafuso?",
+  ctaText:
+    "Mande o modelo do seu compressor de parafuso e o item que precisa — respondemos rápido com preço e prazo.",
   ctaMessage: "Olá! Preciso de FILTROS/ÓLEO para compressor de parafuso.",
 };
 

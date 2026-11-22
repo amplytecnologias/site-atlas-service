@@ -7,6 +7,7 @@ import { Clientes } from "@/components/site/sections/clientes";
 import { PorQue } from "@/components/site/sections/por-que";
 import { Avaliacoes } from "@/components/site/sections/avaliacoes";
 import { Contato } from "@/components/site/sections/contato";
+import { Faq } from "@/components/site/sections/faq";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Clientes />
       <PorQue />
       <Avaliacoes />
+      <Faq />
       <Contato />
     </>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/site/reveal";
 import { WhatsAppLink } from "@/components/site/tracked-links";
@@ -18,22 +19,23 @@ export function Produtos() {
             Máquinas prontas para entrar em operação
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Nossa linha de compressores de parafuso rotativo, de 10 a 120 hp, disponível para venda e
-            também para locação. Clique no modelo para ver todas as especificações técnicas.
+            Nossa linha de compressores de ar de parafuso rotativo industriais, de 10 a 120 hp, disponível
+            para venda e também para locação. Clique no modelo para ver todas as especificações técnicas.
           </p>
         </Reveal>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
-            <Reveal key={product.slug} delay={0.07 * index}>
+            <Reveal key={product.slug} delay={0.05 * index}>
               <Link href={`/produtos/${product.slug}`} className="group flex h-full flex-col">
-                <div className="relative overflow-hidden rounded-2xl border border-brand/25 bg-white p-3 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-brand group-hover:shadow-xl group-hover:shadow-brand/15">
+                <div className="lift-card relative overflow-hidden rounded-2xl border border-brand/25 bg-white p-3 group-hover:border-brand">
                   <div className="relative h-52 overflow-hidden rounded-xl">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.imageAlt}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-105"
                     />
                     <span className="absolute left-3 top-3 rounded-full bg-brand-ink/85 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
                       {product.category}
@@ -48,7 +50,7 @@ export function Produtos() {
                     {product.quickSpecs.map((spec) => spec.value).join(" · ")}
                   </p>
                   <span className="mt-4 inline-flex items-center justify-center rounded-full border-2 border-brand px-9 py-2 text-sm font-bold text-brand transition-colors duration-200 group-hover:bg-brand group-hover:text-white">
-                    Ficha técnica
+                    Ficha técnica <span className="sr-only">do {product.name}</span>
                   </span>
                 </div>
               </Link>
@@ -56,14 +58,14 @@ export function Produtos() {
           ))}
         </div>
 
-        {/* Destaque: atendemos outras marcas e modelos além da linha própria */}
+        {/* Destaque: atendemos compressores de parafuso de outras marcas, além da nossa linha */}
         <Reveal className="mt-12" delay={0.2}>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-ink via-brand-dark to-brand px-6 py-10 text-center text-white shadow-xl shadow-brand/20 md:px-12">
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-light/50 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-teal-light backdrop-blur-sm">
               Não encontrou o que procura?
             </span>
             <h3 className="mx-auto mt-4 max-w-2xl font-display text-2xl font-extrabold tracking-tight md:text-3xl">
-              Trabalhamos com outras marcas e modelos
+              Compressores de parafuso de outras marcas
             </h3>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
               Além da nossa linha, vendemos, alugamos e damos assistência técnica em compressores de
@@ -72,9 +74,9 @@ export function Produtos() {
             </p>
             <WhatsAppLink
               href={whatsappLink("Olá! Procuro um compressor de parafuso de outra marca/modelo. Podem me ajudar?")}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-whatsapp-dark"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-3 text-sm font-bold text-white transition-[background-color,transform] duration-150 ease-[var(--ease-out)] hover:bg-whatsapp-dark active:scale-[0.97]"
             >
-              Consultar outras marcas e modelos
+              Consultar outras marcas de parafuso
             </WhatsAppLink>
           </div>
         </Reveal>

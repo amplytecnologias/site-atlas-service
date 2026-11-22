@@ -1,13 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import { WhatsAppLink } from "@/components/site/tracked-links";
 import { useLinkWhatsApp } from "@/components/whatsapp-origem";
+
+// Proporção real do arquivo public/logo.png
+const LOGO_W = 480;
+const LOGO_H = 324;
 
 const sections = [
   { href: "/", label: "Home" },
@@ -30,14 +35,14 @@ const menuVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.25, ease: "easeOut", staggerChildren: 0.04, delayChildren: 0.05 },
+    transition: { duration: 0.22, ease: [0.23, 1, 0.32, 1], staggerChildren: 0.03, delayChildren: 0.04 },
   },
-  exit: { opacity: 0, y: -8, scale: 0.98, transition: { duration: 0.18, ease: "easeIn" } },
+  exit: { opacity: 0, y: -6, scale: 0.98, transition: { duration: 0.15, ease: [0.23, 1, 0.32, 1] } },
 } as const;
 
 const itemVariants = {
-  hidden: { opacity: 0, x: 12 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.22, ease: "easeOut" } },
+  hidden: { opacity: 0, x: 8 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.2, ease: [0.23, 1, 0.32, 1] } },
   exit: { opacity: 0, transition: { duration: 0.08 } },
 } as const;
 
@@ -51,9 +56,13 @@ export function Header() {
       {/* Logo estática no topo — rola junto com a página */}
       <div className="absolute left-4 top-4 z-40 md:left-6 md:top-6">
         <Link href="/" onClick={closeMenu} aria-label="Atlas Service — página inicial">
-          <img
+          <Image
             src="/logo.png"
-            alt="Atlas Service — manutenção em compressores"
+            alt="Atlas Service"
+            width={LOGO_W}
+            height={LOGO_H}
+            priority
+            sizes="120px"
             className="h-16 w-auto [filter:drop-shadow(0_0_6px_rgba(255,255,255,0.95))_drop-shadow(0_0_20px_rgba(255,255,255,0.75))] md:h-20"
           />
         </Link>
@@ -62,7 +71,7 @@ export function Header() {
       {/* Hambúrguer fixo — a única coisa que acompanha a rolagem */}
       <div className="fixed right-4 top-4 z-50 md:right-6 md:top-6">
         <button
-          className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-brand-mist bg-white text-brand-ink shadow-lg shadow-brand-ink/10 transition-colors hover:bg-brand-bg"
+          className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-brand-mist bg-white text-brand-ink shadow-lg shadow-brand-ink/10 transition-[background-color,transform] duration-150 ease-[var(--ease-out)] hover:bg-brand-bg active:scale-[0.95]"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}

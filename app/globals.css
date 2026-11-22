@@ -72,3 +72,90 @@ body {
   background-color: #1141d6;
   color: #ffffff;
 }
+
+/* ===== Movimento =====
+   Curvas fortes de ease-out (resposta imediata) e durações curtas.
+   Tudo aqui é transform/opacity (roda na GPU) e respeita "reduzir movimento". */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Entrada escalonada do topo das páginas (o H1 não anima, para não atrasar o LCP) */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-rise {
+  animation: hero-rise 600ms var(--ease-out) both;
+}
+
+/* Cartões que sobem levemente no hover (só em dispositivos com mouse) */
+.lift-card {
+  transition:
+    transform 250ms var(--ease-out),
+    box-shadow 250ms var(--ease-out),
+    border-color 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .lift-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px -12px rgb(17 65 214 / 0.22);
+  }
+}
+
+/* FAQ: a resposta aparece com um leve deslize ao abrir */
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.faq-item[open] .faq-answer {
+  animation: faq-open 220ms var(--ease-out);
+}
+
+/* Depoimentos: rolagem contínua em CSS (fora da thread principal), pausa no hover */
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+.marquee-up {
+  animation: marquee-up var(--marquee-duration, 15s) linear infinite;
+}
+.marquee-pause:hover .marquee-up {
+  animation-play-state: paused;
+}
+
+/* Confirmação de envio do formulário */
+.form-success {
+  animation: hero-rise 320ms var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-success,
+  .hero-rise,
+  .faq-item[open] .faq-answer {
+    animation: none;
+  }
+  .marquee-up {
+    animation: none;
+  }
+  .lift-card:hover {
+    transform: none;
+  }
+}
